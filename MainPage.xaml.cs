@@ -13,16 +13,10 @@ public partial class MainPage : ContentPage
 	}
 
     #region Handlers
-    private void OnCounterClicked(object sender, EventArgs e)
+    private void AddBtn_Clicked(object sender, EventArgs e)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		
+		SemanticScreenReader.Announce(AddBtn.Text);
 	}
 
 	private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -34,7 +28,7 @@ public partial class MainPage : ContentPage
 	{
 
 	}
-    #endregion
+	#endregion
 
 }
 
