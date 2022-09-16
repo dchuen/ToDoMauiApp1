@@ -16,13 +16,13 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="To-Do List"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="To do, or not to do? That is the question."
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
@@ -34,7 +34,33 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-
+                
+            <ListView
+                ItemsSource="{Binding ToDoItems}"
+                HasUnevenRows="True"
+                ItemTapped="ListView_ItemTapped"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5">
+                                <Label 
+                                    Text="{Binding Title}"
+                                    FontSize="18"
+                                    />
+                                <Label
+                                    Text="{Binding Description}"
+                                    FontSize="12"
+                                    />
+                                <CheckBox 
+                                    IsChecked="{Binding IsCompleted}"
+                                    CheckedChanged="IsCompletedCheckBox_CheckedChanged"
+                                    />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </VerticalStackLayout>
     </ScrollView>
 

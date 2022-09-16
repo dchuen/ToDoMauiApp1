@@ -1,4 +1,6 @@
-﻿namespace MauiApp1;
+﻿using MauiApp1.ViewModels;
+
+namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
@@ -7,9 +9,11 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+		BindingContext = new MainPageVm();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+    #region Handlers
+    private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -20,5 +24,17 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+
+	private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+	{
+
+	}
+
+	private void IsCompletedCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+	{
+
+	}
+    #endregion
+
 }
 
