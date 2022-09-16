@@ -4,7 +4,6 @@ namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
@@ -15,7 +14,6 @@ public partial class MainPage : ContentPage
     #region Handlers
     private void AddBtn_Clicked(object sender, EventArgs e)
 	{
-		
 		SemanticScreenReader.Announce(AddBtn.Text);
 	}
 

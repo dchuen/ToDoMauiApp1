@@ -6,13 +6,13 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="30,10"
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="task_list.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                HeightRequest="100"
                 HorizontalOptions="Center" />
 
             <Label
@@ -43,24 +43,22 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="5">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout>
-                                        <CheckBox 
-                                            IsChecked="{Binding IsCompleted}"
-                                            CheckedChanged="IsCompletedCheckBox_CheckedChanged"
-                                            />
-                                    </StackLayout>
-                                    <StackLayout>
-                                        <Label 
-                                            Text="{Binding Title}"
-                                            FontSize="18"
-                                            />
-                                        <Label
-                                            Text="{Binding Description}"
-                                            FontSize="12"
-                                            />
-                                    </StackLayout>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <StackLayout HorizontalOptions="Start">
+                                    <CheckBox 
+                                        IsChecked="{Binding IsCompleted}"
+                                        CheckedChanged="IsCompletedCheckBox_CheckedChanged"
+                                        />
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label 
+                                        Text="{Binding Title}"
+                                        FontSize="18"
+                                        />
+                                    <Label
+                                        Text="{Binding Description}"
+                                        FontSize="12"
+                                        />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
