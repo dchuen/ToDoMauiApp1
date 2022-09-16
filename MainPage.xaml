@@ -24,7 +24,7 @@
             <Label
                 Text="To do, or not to do? That is the question."
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.Description="To do, or not to do? That is the question."
                 FontSize="18"
                 HorizontalOptions="Center" />
 
